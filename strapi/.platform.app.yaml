@@ -29,7 +29,7 @@ hooks:
         ./handle_mounts.sh
 
         # Install dependencies and build Strapi.
-        yarn --ignore-optional --frozen-lockfile 
+        yarn --ignore-optional --frozen-lockfile
         yarn build
     # The deploy hook runs after your application has been deployed and started.
     # Code cannot be modified at this point but the database is available.
@@ -60,7 +60,7 @@ web:
             fi
 
 # The size of the persistent disk of the application (in MB).
-disk: 1024
+disk: 2048
 
 # The 'mounts' describe writable, persistent filesystem mounts in the application.
 mounts:

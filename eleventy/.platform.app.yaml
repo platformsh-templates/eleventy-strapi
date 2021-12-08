@@ -24,7 +24,7 @@ hooks:
     # The build hook runs after yarn has been downloaded.
     # No services are available but the disk is writeable.
     build: |
-        yarn --ignore-optional --frozen-lockfile 
+        yarn --ignore-optional --frozen-lockfile
     # The post_deploy hook runs after your application has been deployed and started.
     # Code cannot be modified at this point but the database is available.
     # At this point, the Strapi container has been deployed and is accepting requests.
@@ -47,7 +47,7 @@ web:
             yarn start --port=$PORT
 
 # The size of the persistent disk of the application (in MB).
-disk: 1024
+disk: 2048
 
 # The 'mounts' describe writable, persistent filesystem mounts in the application.
 mounts:
@@ -59,4 +59,3 @@ mounts:
     '_site':
         source: local
         source_path: site
-
