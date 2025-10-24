@@ -1,10 +1,11 @@
-# Eleventy Strapi multi-app for Platform.sh
+> [!WARNING]
+> **This repository is no longer maintained by our internal teams.**  
+> The template is provided *as is* and will not receive updates, bug fixes, or new features.  
+> You are welcome to contribute on it or fork the repository and modify it for your own use.
+> To deploy this template on [Upsun](https://www.upsun.com), you can use the command [upsun project:convert](https://docs.upsun.com/administration/cli/reference.html#projectconvert)
+> on this codebase to convert the existing `.platform.app.yaml` configuration file to the [Upsun Flex format](https://docs.upsun.com/create-apps/app-reference/single-runtime-image.html).
 
-<p align="center">
-<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/eleventy-strapi/.platform.template.yaml&utm_content=eleventy-strapi&utm_source=github&utm_medium=button&utm_campaign=deploy_on_platform">
-    <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy on Platform.sh" width="180px" />
-</a>
-</p>
+# Eleventy Strapi multi-app for Platform.sh
 
 This template deploys a two application project on Platform.sh: one for a frontend static site generator, Eleventy, and the other for a backend headless CMS, Strapi. Like our other "decoupled" templates, Eleventy's build is delayed until the `post_deploy` hook, at which point the backend Strapi content data becomes available to query using GraphQL. That data then is reformatted into "Blogs" on the frontend. Both applications utilize the Platform.sh Configuration Reader library for Node.js. It is intended for you to use as a starting point and modify for your own needs.
 
